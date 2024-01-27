@@ -38,10 +38,10 @@ class Scratch3YourExtension {
                     //   BlockType.BOOLEAN - same as REPORTER but returns a true/false value
                     //   BlockType.COMMAND - a normal command block, like "move {} steps"
                     //   BlockType.HAT - starts a stack if its value changes from false to true ("edge triggered")
-                    blockType: BlockType.REPORTER,
+                    blockType: BlockType.BOOLEAN,
 
                     // label to display on the block
-                    text: 'My first block [MY_NUMBER] and [MY_STRING]',
+                    text: 'My first block [string1] and [string2]',
 
                     // true if this block should end a stack
                     terminal: false,
@@ -50,13 +50,13 @@ class Scratch3YourExtension {
                     //   TargetType.SPRITE - for code in sprites
                     //   TargetType.STAGE  - for code on the stage / backdrop
                     // remove one of these if this block doesn't apply to both
-                    filter: [ TargetType.SPRITE, TargetType.STAGE ],
+                    filter: [TargetType.SPRITE],
 
                     // arguments used in the block
                     arguments: {
-                        MY_NUMBER: {
+                        string1: {
                             // default value before the user sets something
-                            defaultValue: 123,
+                            defaultValue: 'Hello',
 
                             // type/shape of the parameter - choose from:
                             //     ArgumentType.ANGLE - numeric value with an angle picker
@@ -65,9 +65,9 @@ class Scratch3YourExtension {
                             //     ArgumentType.NUMBER - numeric value
                             //     ArgumentType.STRING - text value
                             //     ArgumentType.NOTE - midi music value with a piano picker
-                            type: ArgumentType.NUMBER
+                            type: ArgumentType.STRING
                         },
-                        MY_STRING: {
+                        string2: {
                             // default value before the user sets something
                             defaultValue: 'hello',
 
@@ -86,14 +86,13 @@ class Scratch3YourExtension {
         };
     }
 
-
     /**
      * implementation of the block with the opcode that matches this name
      *  this will be called when the block is used
      */
-    myFirstBlock ({ MY_NUMBER, MY_STRING }) {
+    myFirstBlock ({ string1, string2 }) {
         // example implementation to return a string
-        return MY_STRING + ' : doubled would be ' + (MY_NUMBER * 2);
+        return (string1 === string2);
     }
 }
 
