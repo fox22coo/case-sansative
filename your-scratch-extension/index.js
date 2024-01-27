@@ -14,10 +14,10 @@ class Scratch3YourExtension {
     getInfo () {
         return {
             // unique ID for your extension
-            id: 'yourScratchExtension',
+            id: 'monket',
 
             // name that will be displayed in the Scratch UI
-            name: 'Demo',
+            name: 'Case',
 
             // colours to use for your extension blocks
             color1: '#6fb547',
