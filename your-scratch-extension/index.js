@@ -20,8 +20,8 @@ class Scratch3YourExtension {
             name: 'Demo',
 
             // colours to use for your extension blocks
-            color1: '#000099',
-            color2: '#660066',
+            color1: '#6fb547',
+            color2: '#6fb547',
 
             // icons to display
             blockIconURI: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAAAAACyOJm3AAAAFklEQVQYV2P4DwMMEMgAI/+DEUIMBgAEWB7i7uidhAAAAABJRU5ErkJggg==',
@@ -41,7 +41,7 @@ class Scratch3YourExtension {
                     blockType: BlockType.BOOLEAN,
 
                     // label to display on the block
-                    text: 'My first block [string1] and [string2]',
+                    text: 'is [string1] = [string2]',
 
                     // true if this block should end a stack
                     terminal: false,
